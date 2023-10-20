@@ -13,3 +13,13 @@ Desenvolupar l'app amb HTML, CSS, Bootstrap, PHP, JS, Base de Dades i SQL
 <li>Pujar el codi al GitHub</li>
 <li>Fer una exposició del projecte a classe.</li>
 <ol>
+
+
+Iker: 
+- 1, 2, 5 (conjunto Iker), 8, 10, 11
+
+Julio: 
+- 3, 4 (conjuto Oscar), 5 (conjunto Iker), 6 (conjunto Oscar), 9, 10, 11
+
+Oscar: 
+- 4 (conjunto Julio), 6, 7, 10, 11
