@@ -1,7 +1,7 @@
 <?php
     if (!filter_has_var(INPUT_POST, 'enviar')) 
     {
-        header('Location: '.'./index.php?error=has de rellenar el formulario'); // Comprueba si en post existe 'enviar', si no existe te redirige a index con un mensaje de error.
+        header('Location: '.'./index.php?error=Debes de rellenar el formulario (validacion.php)'); // Comprueba si en post existe 'enviar', si no existe te redirige a index con un mensaje de error.
         exit();
     }
 
