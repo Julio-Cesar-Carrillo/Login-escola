@@ -16,7 +16,7 @@ Desenvolupar l'app amb HTML, CSS, Bootstrap, PHP, JS, Base de Dades i SQL
 
 
 Iker: 
-- 1, 2, 5 (conjunto Iker), 8, 10, 11
+- 1, 2, 5 (conjunto Julio), 8, 10, 11
 
 Julio: 
 - 3, 4 (conjuto Oscar), 5 (conjunto Iker), 6 (conjunto Oscar), 9, 10, 11
