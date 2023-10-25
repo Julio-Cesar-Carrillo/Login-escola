@@ -93,5 +93,6 @@
             echo"<input type='hidden' id='contra' name='contra' value='".$contra."'>";
         echo "</form>";
         echo "<script>document.getElementById('EnvioCheck').submit();</script>";
+        
     }
 ?>
