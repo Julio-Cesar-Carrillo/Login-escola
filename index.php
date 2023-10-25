@@ -29,16 +29,16 @@ session_start();
                 <form id="login" action="validacion.php" method="post">
                     <h2>Iniciar Sesión</h2>
                     <div class="mb-3">
-                    <label for="exampleInputUser1" class="form-label">Correo Electrónico</label>
-                    <input type="text" name="user" class="form-control" id="user" aria-describedby="userHelp">
-                    <!-- <div id="userHelp" class="form-text">No comparta sus credenciales con nadie.</div> -->
-                    <p style="display: none; color: red;" id="alertauser">¡El formato de usuario que intenta introducir no es valido!</p>
+                        <label for="exampleInputUser1" class="form-label">Correo Electrónico</label>
+                        <input type="text" name="user" class="form-control" id="user" aria-describedby="userHelp">
+                        <!-- <div id="userHelp" class="form-text">No comparta sus credenciales con nadie.</div> -->
+                        <p style="display: none; color: red;" id="alertauser">¡El formato de usuario que intenta introducir no es valido!</p>
                     </div>
-                    <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                    <input type="password" name="pass" class="form-control" id="pass">
-                    <p style="display: none; color: red;" id="alertapass">¡La contraseña debe de tener almenos 9 caracteres!</p>
 
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                        <input type="password" name="pass" class="form-control" id="pass">
+                        <p style="display: none; color: red;" id="alertapass">¡La contraseña debe de tener almenos 9 caracteres!</p>
                     </div>
                     <!-- <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
