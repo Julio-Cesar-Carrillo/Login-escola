@@ -20,11 +20,11 @@ session_start();
     </head>
 
     <body>
-        
         <div class="f-login">
             <div class="logo">
                 <img src="img/logo.png" alt="Error al cargar el logo" srcset="">
             </div>
+            
             <div class="formulario">
                 <form id="login" action="validacion.php" method="post">
                     <h2>Iniciar Sesión</h2>
