@@ -27,6 +27,9 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `tbl_profesores`
 --
 
+CREATE DATABASE 'db_ies_contreras';
+USE 'db_ies_contreras';
+
 CREATE TABLE `tbl_profesores` (
   `id` int(11) NOT NULL,
   `nombre_profe` varchar(45) NOT NULL,
