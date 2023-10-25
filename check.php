@@ -1,5 +1,5 @@
 <?php
-if (!filter_has_var(INPUT_POST, 'EnvioCheck')) 
+if (filter_has_var(INPUT_POST, 'EnvioCheck')) 
 {
     header('Location: ' . './index.php?error=Debes rellenar el formulario. (check.php)');
     exit();
