@@ -28,7 +28,8 @@
 
         else
         {
-            header('Location: '.'./index.php?Usuario o contraseña incorrectos');
+            header('Location: '.'../index.php?Usuario o contraseña incorrectos');
+            exit();
         }
     } 
     $conn->close();   
