@@ -26,7 +26,7 @@
             </div>
             
             <div class="formulario">
-                <form id="login" action="./procesos/validacion.php" method="post">
+                <form id="login" action="validacion.php" method="post">
                     <h2>Iniciar Sesión</h2>
                     <div class="mb-3">
                         <label for="exampleInputUser1" class="form-label">Nombre de usuario:</label>
@@ -45,9 +45,71 @@
                     <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
                     </div> -->
                     <button type="submit" class="btn btn-primary" style="background-color: #034b66; border-color: #023b56;" name="enviar">Enviar</button>
-                    <script src="./js/validacion.js"></script>
                 </form>
             </div>
         </div>
+
+        <script>
+            function validarUser(user) 
+            {
+                const regex = /^[a-zA-Z]*$/;
+                return regex.test(user);
+            }
+
+            // Obtener el formulario por su ID
+            const userF = document.getElementById('user');
+            const passF = document.getElementById('pass');
+
+            // Agregar un manejador de eventos para el envío del formulario
+            userF.addEventListener('input', function () 
+            {
+                // Obtener los valores de los campos de entrada
+                const user = document.getElementById('user');
+                console.log(user.value);
+                const alertauser = document.getElementById('alertauser');
+
+                if (validarUser(user.value)) 
+                {
+                    console.log("Usuario no valido.");
+                    alertauser.style.display = 'none';
+
+                }
+                
+                else if (user.value.length < 1) 
+                {
+                    alertauser.style.display = 'none';
+                }
+                
+                else 
+                {
+                    alertauser.style.display = 'block';
+                    console.log("El usuario no es válido.");
+                }
+            });
+
+            passF.addEventListener('input', function () 
+            {
+                // Obtener los valores de los campos de entrada
+                const pass = document.getElementById('pass');
+                console.log(pass.value.length);
+                const alertapass = document.getElementById('alertapass');
+
+                if (pass.value.length < 1) 
+                {
+                    alertapass.style.display = 'none';
+                }
+                
+                else if (pass.value.length < 9) {
+                    console.log("La contraseña debe de tener almenos 9 caracteres");
+                    alertapass.style.display = 'block';
+                } 
+                
+                else 
+                {
+                    alertapass.style.display = 'none';
+                }
+
+            });
+        </script>
     </body>
 </html>
