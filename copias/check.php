@@ -6,7 +6,8 @@ if (filter_has_var(INPUT_POST, 'EnvioCheck'))
 } 
 
 else 
-{ // Incluimos el archivo de conexión a la base de datos.
+{ 
+    // Incluimos el archivo de conexión a la base de datos.
     include('conexion.php');
 
     $user = $_POST['user'];

@@ -1,12 +1,12 @@
 <?php
-if (filter_has_var(INPUT_POST, 'EnvioCheck')) 
-{
-    header('Location: ' . './index.php?error=Debes rellenar el formulario para acceder a check.php');
-    exit();
-} 
-
-else 
-{ // Incluimos el archivo de conexión a la base de datos.
+    if (!filter_has_var(INPUT_POST, 'EnvioCheck')) {
+        header('Location: ../index.php?error=Debes rellenar el formulario para acceder a check.php');
+        exit();
+    } 
+    
+    else 
+    {
+    // Incluimos el archivo de conexión a la base de datos.
     include('conexion.php');
 
     $user = $_POST['user'];
@@ -30,7 +30,7 @@ else
         {
             header('Location: '.'./index.php?Usuario o contraseña incorrectos');
         }
-    }
-    // Cierra la conexión a la base de datos
-    $conn->close();
+    } 
+    $conn->close();   
 }
+?>
