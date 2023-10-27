@@ -56,7 +56,7 @@
 
     <body>
         <form action="./cerrar_sesion.php" method="post">
-            <input type="submit" value="Cerrar Sesion">
+            <input type="submit" name="enviar" value="Cerrar Sesion">
         </form>
     </body>
 </html>
