@@ -1,23 +1,23 @@
 <?php
-    if (!filter_has_var(INPUT_POST, 'enviar')) 
+    session_start(); // Iniciamos la sesión.
+
+    if (!isset($_POST['enviar'])) 
     {
-        header('Location: ../index.php?error=Debes de rellenar el formulario para acceder a validacion.php');
+        header('Location: ../index.php?error=Debes rellenar el formulario para acceder a validacion.php');
         exit();
-    } 
-    
-    else 
-    {
-        session_start(); // Iniciamos la sesión.
-
-        $_SESSION['user'] = isset($_POST['user']) ? $_POST['user'] : ""; // Creamos la variable de sesión a partir del formulario.        
-        $_SESSION['contra'] = isset($_POST['contra']) ? $_POST['contra'] : ""; // Creamos la variable de sesión a partir del formulario.
-
-        // Pasa el usuario y la contraseña a check.php utilizando una solicitud POST
-        echo "<form id='EnvioCheck' name='EnvioCheck' action='check.php' method='POST'>";
-        echo "<input type='hidden' name='EnvioCheck' value='1'>"; // Agrega una bandera para indicar que esta es una presentación de formulario
-        echo "</form>";
-
-        // Envía automáticamente el formulario
-        echo "<script>document.getElementById('EnvioCheck').submit();</script>";
     }
+
+    if (isset($_POST['user'])) 
+    {
+        $_SESSION['user'] = $_POST['user'];
+    }
+
+    if (isset($_POST['pass'])) 
+    {
+        $pass = $_POST['pass'];
+        $_SESSION['pass'] = $pass;
+    }
+
+    header("Location: check.php");
+    exit();
 ?>
