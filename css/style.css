@@ -16,13 +16,15 @@ html, body{
     height: 100%;
     margin: 0;
 }
+
 body {
     /* margin: 5% 20%; */
-    background-image: url(img/fondo.jpg);
+    background-image: url(../img/fondo.jpg);
     /* background-repeat: no-repeat; */
     background-size: cover;
     color: white;
 }
+
 .f-login {
     background-color: #023b569d;
     width: 50%;
