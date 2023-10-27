@@ -20,5 +20,4 @@
         // Destruir la sesión
         session_destroy();
     }
-    exit();
 ?>
