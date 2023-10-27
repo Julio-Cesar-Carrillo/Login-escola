@@ -50,6 +50,19 @@ body {
 #alertaemail, #alertapass {
     margin: 0;
 }
+.c_sesion p{
+    text-align: center;
+    font-size: 2vw;
+}
+.c_sesion #carga {
+    text-align: center;
+    font-size: 1.5vw;
+}
+.c_sesion img {
+    float: center;
+    margin-left: 45%;
+    border-radius: 10px;
+}
 /* .formulario h2 {
     margin-left: 5%;
 } */
@@ -90,6 +103,22 @@ form button:hover {
     }
     button {
         width: 100%;
+    }
+    .c_sesion { 
+        margin: 1%;
+    }
+    .c_sesion p{
+        text-align: center;
+        font-size: 6vw;
+    }
+    .c_sesion #carga{
+        text-align: center;
+        font-size: 4vw;
+    }
+    .c_sesion img{
+        width: 50%;
+        margin-left: 24%;
+
     }
 
 
