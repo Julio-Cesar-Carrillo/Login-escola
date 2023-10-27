@@ -34,7 +34,7 @@ else
 
             if (hash_equals($contra_encriptada, $contra_profe)) // Comparamos la contraseña encriptada del usuario con la almacenada en la base de datos.
             {  
-                echo "¡Bienvenido, " . $_SESSION['user'] . "! La contraseña es correcta."; // Si coinciden, se da la bienvenida.
+                echo "¡Bienvenido, " . $_SESSION['user'] . "! La contraseña es correcta. <br>"; // Si coinciden, se da la bienvenida.
                 
             } 
             
@@ -48,3 +48,18 @@ else
     $conn->close(); // Cerramos la conexión a la base de datos.
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CHECK</title>
+    </head>
+
+    <body>
+        <form action="./cerrar_sesion.php" method="post">
+            <input type="submit" name="enviar" id="enviar" value="Cerrar Sesion">
+        </form>
+    </body>
+</html>
