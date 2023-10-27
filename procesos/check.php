@@ -10,8 +10,6 @@ else
 {
     session_start(); // Iniciamos la sesión.
 
-    $contra = $_POST['contra']; // Obtenemos la contraseña del formulario.
-
     include('conexion.php'); // Incluimos el archivo de conexión a la base de datos.
 
     $consulta = "SELECT * FROM tbl_profesores WHERE nombre_profe = ?"; // Consulta SQL con marcador de posición.
@@ -30,7 +28,7 @@ else
 
             $contra_profe = $fila['contra_profe'];  // Obtenemos la contraseña almacenada en la base de datos.
 
-            $contra_encriptada = hash("sha256", $contra); // Encriptamos la contraseña proporcionada por el usuario.
+            $contra_encriptada = hash("sha256", $_SESSION['contra']); // Encriptamos la contraseña proporcionada por el usuario.
 
             if (hash_equals($contra_encriptada, $contra_profe)) // Comparamos la contraseña encriptada del usuario con la almacenada en la base de datos.
             {  

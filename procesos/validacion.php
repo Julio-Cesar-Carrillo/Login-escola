@@ -9,11 +9,11 @@
     {
         session_start(); // Iniciamos la sesión.
 
-        $_SESSION['user'] = isset($_POST['user']) ? $_POST['user'] : ""; // Creamos la variable de sesión a partir del formulario.
+        $_SESSION['user'] = isset($_POST['user']) ? $_POST['user'] : ""; // Creamos la variable de sesión a partir del formulario.        
+        $_SESSION['contra'] = isset($_POST['contra']) ? $_POST['contra'] : ""; // Creamos la variable de sesión a partir del formulario.
 
         // Pasa el usuario y la contraseña a check.php utilizando una solicitud POST
         echo "<form id='EnvioCheck' name='EnvioCheck' action='check.php' method='POST'>";
-        echo "<input type='hidden' name='contra' value='" . $contra . "'>";
         echo "<input type='hidden' name='EnvioCheck' value='1'>"; // Agrega una bandera para indicar que esta es una presentación de formulario
         echo "</form>";
 
