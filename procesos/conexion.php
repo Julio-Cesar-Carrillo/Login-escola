@@ -10,8 +10,6 @@
     try 
     {
         $conn = @mysqli_connect($dbserver, $dbusername, $dbpassword, $dbbasedatos); // Se establece la conexión a la base de datos con los parámetros que hemos implementado.
-
-        echo "Conectado al servidor. <br>"; // Mostramos un mensaje que Confirma la conexión a la base de datos.
     } 
 
     // Si detecta excecpciones las guarda en la variable $e

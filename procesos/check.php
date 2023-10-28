@@ -29,8 +29,27 @@
             // Comparamos la contraseña almacenada con la contraseña proporcionada
             if (hash_equals($contra_encriptada, $contra_profe)) 
             {
-                // La contraseña es correcta, muestra un mensaje de bienvenida
-                echo "¡Bienvenido, " . $_SESSION['user'] . "! La contraseña es CORRECTA. <br>";
+                ?>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>Cerrar sesión</title>
+                            <link rel="stylesheet" href="../css/style.css">
+                        </head>
+                        
+                        <body>
+                            <div class="c-cerrar">
+                                <h2>¡Bienvenido <?php echo $_SESSION['user']; ?>! La contraseña es CORRECTA</h2> <!-- Se despide del usuario cogiendo la variable de sesión -->
+                                <img src='../img/iker.png' style="border-radius: 15px;">
+                                <form action="./cerrar_sesion.php" method="post">
+                                    <input type="submit" name="enviar" value="Cerrar Sesión">
+                                </form>
+                            </div>
+                        </body>
+                    </html>
+                <?php
             } 
             
             else 
@@ -45,18 +64,3 @@
 
     $conn->close(); // Cierra la conexión a la base de datos
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-
-    <body>
-        <form action="./cerrar_sesion.php" method="post">
-            <input type="submit" name="enviar" value="Cerrar Sesion">
-        </form>
-    </body>
-</html>

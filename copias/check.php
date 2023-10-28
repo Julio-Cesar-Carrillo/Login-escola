@@ -5,6 +5,12 @@ if (filter_has_var(INPUT_POST, 'EnvioCheck'))
     exit();
 } 
 
+if (!filter_has_var(INPUT_POST, 'enviar')) 
+{
+    header('Location: ../index.php?error=Debes de rellenar el formulario para acceder a check.php');
+    exit();
+} 
+
 else 
 { 
     // Incluimos el archivo de conexión a la base de datos.
@@ -17,7 +23,8 @@ else
     $consulta = "SELECT * FROM tbl_profesores WHERE nombre_profe = '$user'";
     $resultado = $conn->query($consulta);
 
-    if ($resultado->num_rows === 1) {
+    if ($resultado->num_rows === 1) 
+    {
         $fila = $resultado->fetch_assoc();
         $contra_profe = $fila['contra_profe']; // CONTRASEÑA QUE TIENE EL USUARIO
         $contra_encriptada = hash("sha256", $contra); // ENCRIPTADO DE LA CONTRASEÑA DEL FORMULARIO
