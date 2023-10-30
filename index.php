@@ -42,7 +42,7 @@
                         <p style="display: none; color: red;" id="alertapass">¡La contraseña debe de tener almenos 9 caracteres!</p> <!-- El mensaje de error permanece oculto hasta que detecta que la contraseña es lo suficientemente larga. -->
                     </div>
 
-                    <button type="submit" class="btn btn-primary" style="background-color: #034b66; border-color: #023b56;" name="enviar" id="submitBtn" disabled>Enviar</button>
+                    <button type="submit" class="btn btn-primary" style="background-color: #034b66; border-color: #023b56;" name="enviar" id="btnEnviar" disabled>Enviar</button>
 
                     <script src="./js/validacion.js"></script> <!-- Este script valida el formato y si los campos están vacíos -->
                 </form>
